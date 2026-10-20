@@ -1,0 +1,21 @@
+# © 2026 aiaiaiai · aiaiaiai.org
+# SPDX-License-Identifier: Apache-2.0
+
+[package]
+name = "prism-geo"
+description = "Deterministic grid cells for Prism: coordinates to cells, distance, one owner"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+publish = false
+
+[lints]
+workspace = true
+
+[dependencies]
+# h3o 0.9 matches h-ua-bot; prism-signal-geo is on 0.8 and moves over in its own change.
+h3o = "0.9"
+thiserror.workspace = true
