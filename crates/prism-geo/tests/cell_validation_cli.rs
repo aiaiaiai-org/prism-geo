@@ -24,7 +24,12 @@ fn valid_canonical_cell_is_accepted_without_echoing_it() {
     assert!(result.status.success());
     assert_eq!(result.stdout, b"valid\n");
     assert!(result.stderr.is_empty());
-    assert!(!result.stdout.windows(CELL.len()).any(|w| w == CELL.as_bytes()));
+    assert!(
+        !result
+            .stdout
+            .windows(CELL.len())
+            .any(|w| w == CELL.as_bytes())
+    );
 }
 
 #[test]
