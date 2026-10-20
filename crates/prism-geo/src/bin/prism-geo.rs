@@ -42,7 +42,11 @@ fn main() -> ExitCode {
         return invalid("invalid_cell");
     };
     let cell = input.strip_suffix('\n').unwrap_or(input);
-    if cell.len() != 15 || !cell.bytes().all(|b| b.is_ascii_hexdigit() && !b.is_ascii_uppercase()) {
+    if cell.len() != 15
+        || !cell
+            .bytes()
+            .all(|b| b.is_ascii_hexdigit() && !b.is_ascii_uppercase())
+    {
         return invalid("invalid_cell");
     }
 
